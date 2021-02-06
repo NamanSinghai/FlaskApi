@@ -29,6 +29,12 @@ dummy_data = [
                 }
             ]
 
+@app.route("/")
+def home():
+    return {
+        "message": "THIS IS A DUMMY API"
+    }
+
 @app.route("/city", methods=["GET", "POST"])
 def city():
     if request.method == "GET":
